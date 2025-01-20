@@ -16,6 +16,7 @@ services:
       context: .
       dockerfile: Dockerfile-airflow
     environment:
+      - AIRFLOW__CORE__DONOT_PICKLE=True
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
       - AIRFLOW_CONN_DATAHUB_REST_DEFAULT=http://datahub:8080
@@ -43,6 +44,7 @@ services:
       context: .
       dockerfile: Dockerfile-airflow
     environment:
+      - AIRFLOW__CORE__DONOT_PICKLE=True
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
       - AIRFLOW_CONN_DATAHUB_REST_DEFAULT=http://datahub:8080

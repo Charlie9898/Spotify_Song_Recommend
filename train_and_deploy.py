@@ -10,7 +10,7 @@ import re
 import dill as pickle
 
 mlflow.set_tracking_uri("http://localhost:5000")
-mlflow.set_experiment("Song_Recommender_Model_Trainer")
+mlflow.set_experiment("Song_Recommendation_Model_Auto_Training")
 
 df = pd.read_csv("./data/tracks.csv")
 
